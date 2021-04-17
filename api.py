@@ -1,10 +1,12 @@
 import flask, os
 from flask import request, jsonify, Response
+from flask_cors import CORS
 
 from database_helpers import *
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
+CORS(app)
 
 @app.route('/', methods=['GET'])
 def home():
