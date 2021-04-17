@@ -5,7 +5,6 @@ from database_helpers import *
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
-port = int(os.environ.get("PORT", 5000))
 
 @app.route('/', methods=['GET'])
 def home():
@@ -83,4 +82,4 @@ def post_file(filename):
     return "", 201
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=port)
+    app.run()
