@@ -11,7 +11,7 @@ RUN pip3 install --requirement /tmp/requirements.txt
 
 WORKDIR /
 RUN apt-get install -y git && \
-    git clone https://github.com/parledoct/qbestd_box.git && \
+    git clone https://github.com/Temigo/qbestd_box.git && \
     chmod +x qbestd_box/qbestd.py
 
 WORKDIR /qbestd_box
